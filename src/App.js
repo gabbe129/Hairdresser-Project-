@@ -4,6 +4,7 @@ import SignUpForm from './SignUpForm';
 import SignInForm from './SignInForm';
 
 import './App.css';
+import BookingTreatment from './BookingTreatment';
 
 class App extends Component {
   render() {
@@ -15,12 +16,17 @@ class App extends Component {
             
 
               <div className="FormTitle">
-                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
+                  <NavLink to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Home</NavLink>
+                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink>
+                   or 
+                  <NavLink exact to="/sign-up" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
               </div>
 
-              <Route exact path="/" component={SignUpForm}>
+              <Route exact path="/sign-up" component={SignUpForm}>
               </Route>
               <Route path="/sign-in" component={SignInForm}>
+              </Route>
+              <Route exact path="/" component={BookingTreatment}>
               </Route>
           </div>
 
