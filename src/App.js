@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
-import SignUpForm from './SignUpForm';
-import SignInForm from './SignInForm';
-
+import SignUpForm from './components/SignUpForm';
+import SignInForm from './components/SignInForm';
+import BookingTreatment from './components/BookingTreatment';
 import './App.css';
-import BookingTreatment from './BookingTreatment';
+
 
 class App extends Component {
   render() {
@@ -18,8 +18,6 @@ class App extends Component {
               <div className="FormTitle">
                   <NavLink to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Home</NavLink>
                   <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink>
-                   or 
-                  <NavLink exact to="/sign-up" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
               </div>
 
               <Route exact path="/sign-up" component={SignUpForm}>
