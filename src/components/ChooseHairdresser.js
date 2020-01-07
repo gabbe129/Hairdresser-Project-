@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-class BookingTreatment extends Component {
+class ChooseHairdresser extends Component {
    constructor(props){
        super(props);
     
      this.state ={
-         treatments:[]
+         hairdressers:[]
      }
    }
     componentDidMount(){
-        this.getTreatments();
+        this.getHairdressers();
     }
-    getTreatments = async () => {
-        const api_call = await fetch('https://bookingapihv.azurewebsites.net/api/treatments');
+    getHairdressers = async () => {
+        const api_call = await fetch('https://bookingapihv.azurewebsites.net/api/hairdressers');
         const data = await api_call.json();
         
         
@@ -25,7 +25,7 @@ class BookingTreatment extends Component {
 
         
             this.setState({
-                treatments: listItems
+                hairdressers: listItems
             });
    
     }
@@ -35,14 +35,16 @@ class BookingTreatment extends Component {
             <div>
                 <form>
                     <select>
-                        {this.state.treatments.map((item, key) =>
-                            <option key={item.id}>{item.name}</option>
+                        {this.state.hairdressers.map((item, key) =>
+        <option key={item.id}>{item.fname} {item.lname}</option>
                         )}
                     </select>
-                </form>              
-                  <button className="NxtBtn"><Link to="/hairdresser">Next page</Link></button> 
+                </form>
+                
+                  <button className="NxtBtn"><Link to="/ChooseHairdresser">Next page</Link></button> 
+              
             </div>         
         )
     }
 }
-export default BookingTreatment;
+export default ChooseHairdresser;
