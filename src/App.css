@@ -151,3 +151,49 @@
   font-size: .8em;
   font-weight: 50;
 }
+.NxtBtn:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+.timeTable{
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  border: black;
+}
+
+.times:hover{
+  background-color: black;
+  color: white;
+}
+.times:focus{
+  background-color: black;
+  color: white;
+}
+.timeTable.time tr:active{
+  background-color: yellow;
+}
+.page {
+  height: 40px;
+  width: 40px;
+  margin: 0 20px;
+  background-color: white;
+  border: black;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  text-align:center;
+  margin-top:40px;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 25px;
+}
+
+.page.active {
+  opacity: 1;
+}
+
+.page.done {
+  background-color: green;
+  opacity: 0.8;
+}

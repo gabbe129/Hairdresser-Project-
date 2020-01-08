@@ -5,6 +5,8 @@ import SignInForm from './components/SignInForm';
 import BookingTreatment from './components/BookingTreatment';
 import ChooseHairdresser from "./components/ChooseHairdresser";
 import './App.css';
+import ChooseTime from './components/ChooseTime';
+import ConfirmBooking from './components/ConfirmBooking';
 
 
 class App extends Component {
@@ -26,6 +28,10 @@ class App extends Component {
               <Route path="/sign-in" component={SignInForm}>
               </Route>
               <Route path="/hairdresser" component={ChooseHairdresser}>
+              </Route>
+              <Route path="/time" component={ChooseTime}>
+              </Route>
+              <Route path="/confirm" component={ConfirmBooking}>
               </Route>
               <Route exact path="/" component={BookingTreatment}>
               </Route>

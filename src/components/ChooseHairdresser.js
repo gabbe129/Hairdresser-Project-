@@ -33,6 +33,12 @@ class ChooseHairdresser extends Component {
         {
         return (
             <div>
+                <div>
+                    <span class="page done">1</span>
+                    <span class="page active">2</span>
+                    <span class="page">3</span>
+                    <span class="page">4</span>
+                </div>
                 <form>
                     <select>
                         {this.state.hairdressers.map((item, key) =>
@@ -40,9 +46,7 @@ class ChooseHairdresser extends Component {
                         )}
                     </select>
                 </form>
-                
-                  <button className="NxtBtn"><Link to="/ChooseHairdresser">Next page</Link></button> 
-              
+                  <Link to="/time"><button className="NxtBtn">Next page</button></Link>
             </div>         
         )
     }

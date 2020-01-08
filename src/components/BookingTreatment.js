@@ -33,14 +33,20 @@ class BookingTreatment extends Component {
         {
         return (
             <div>
+                <div>
+                    <span class="page active">1</span>
+                    <span class="page">2</span>
+                    <span class="page">3</span>
+                    <span class="page">4</span>
+                </div>
                 <form>
                     <select>
                         {this.state.treatments.map((item, key) =>
-                            <option key={item.id}>{item.name}</option>
+        <option key={item.id}>{item.name}, {item.price}kr</option>
                         )}
                     </select>
                 </form>              
-                  <button className="NxtBtn"><Link to="/hairdresser">Next page</Link></button> 
+                <Link to="/hairdresser"><button className="NxtBtn">Next page</button></Link>
             </div>         
         )
     }
