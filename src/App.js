@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
+import { HashRouter as Router, Route, BrowserRouter, NavLink } from 'react-router-dom';
 import SignUpForm from './components/SignUpForm';
 import SignInForm from './components/SignInForm';
 import BookingTreatment from './components/BookingTreatment';
@@ -12,7 +12,7 @@ import ConfirmBooking from './components/ConfirmBooking';
 class App extends Component {
   render() {
     return (
-      <Router basename="/hiardresser-frontend/">
+      <Router>
         <div className="App">
           
           <div className="App__Form">

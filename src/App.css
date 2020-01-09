@@ -197,9 +197,14 @@
 
 .page.active {
   opacity: 1;
+  background-color: rgb(91, 197, 91);
 }
 
 .page.done {
   background-color: green;
   opacity: 0.8;
+}
+.displayBooking{
+  margin-left: 43%;
+  text-align: left;
 }

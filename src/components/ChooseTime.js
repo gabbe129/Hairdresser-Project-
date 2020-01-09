@@ -64,7 +64,7 @@ class ChooseTime extends Component {
                    </tbody>
                </table>
                </form>
-               <Link to="/"><button className="NxtBtn">Previous page</button></Link>
+               <Link to="/hairdresser"><button className="NxtBtn">Previous page</button></Link>
                <Link to="/confirm"><button className="NxtBtn">Confirm booking</button></Link>
             </div>
         )

@@ -39,7 +39,12 @@ class ConfirmBooking extends Component {
                     <span className="page done">3</span>
                     <span className="page active">4</span>
                 </div>
-                
+                <div className="displayBooking">
+                    <p>Treatment: chosen treatment</p>
+                    <p>Hairdresser: chosen hairdresser</p>
+                    <p>Day: chosen day</p>
+                    <p>Time: chosen time</p>
+                </div>
                <Link to="/"><button className="NxtBtn">Confirm</button></Link>
             </div>
         )

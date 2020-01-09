@@ -8,7 +8,9 @@ class ChooseHairdresser extends Component {
     
      this.state ={
          hairdressers:[],
-         choosenHairdresser: ''
+         id: '',
+         fname: '',
+         lname:''
      }
    }
     componentDidMount(){
@@ -30,6 +32,13 @@ class ChooseHairdresser extends Component {
             });
    
     }
+    changeName = (newId, newFname, newLname) => {
+        this.setState({
+            id: newId,
+            fname: newFname,
+            lname: newLname
+        });
+    }
     render()
         {
         return (
@@ -43,10 +52,11 @@ class ChooseHairdresser extends Component {
                 <form>
                     <select>
                         {this.state.hairdressers.map((item, key) =>
-                        <option key={item.id}>{item.fname} {item.lname}</option>
+                        <option key={item.id} onClick={this.changeName.bind(this, item.id, item.fname, item.lname)}>{item.fname} {item.lname}</option>
                         )}
                     </select>
                 </form>
+                        <div>{this.state.fname}</div>
                 <Link to="/"><button className="NxtBtn">Previous page</button></Link>
                 <Link to="/time"><button className="NxtBtn">Next page</button></Link>
             </div>         

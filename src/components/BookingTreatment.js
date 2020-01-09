@@ -7,7 +7,8 @@ class BookingTreatment extends Component {
        super(props);
     
      this.state ={
-         treatments:[]
+         treatments:[],
+        
      }
    }
     componentDidMount(){
