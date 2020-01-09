@@ -7,7 +7,8 @@ class ChooseHairdresser extends Component {
        super(props);
     
      this.state ={
-         hairdressers:[]
+         hairdressers:[],
+         choosenHairdresser: ''
      }
    }
     componentDidMount(){
@@ -32,21 +33,22 @@ class ChooseHairdresser extends Component {
     render()
         {
         return (
-            <div>
+            <div className="centerAll">
                 <div>
-                    <span class="page done">1</span>
-                    <span class="page active">2</span>
-                    <span class="page">3</span>
-                    <span class="page">4</span>
+                    <span className="page done">1</span>
+                    <span className="page active">2</span>
+                    <span className="page">3</span>
+                    <span className="page">4</span>
                 </div>
                 <form>
                     <select>
                         {this.state.hairdressers.map((item, key) =>
-        <option key={item.id}>{item.fname} {item.lname}</option>
+                        <option key={item.id}>{item.fname} {item.lname}</option>
                         )}
                     </select>
                 </form>
-                  <Link to="/time"><button className="NxtBtn">Next page</button></Link>
+                <Link to="/"><button className="NxtBtn">Previous page</button></Link>
+                <Link to="/time"><button className="NxtBtn">Next page</button></Link>
             </div>         
         )
     }

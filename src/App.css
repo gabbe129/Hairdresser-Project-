@@ -1,3 +1,8 @@
+.centerAll{
+  text-align: center;
+  align-items: center;
+}
+
 .App {
   height: 100vh;
   display: flex;
@@ -141,7 +146,9 @@
   margin-left: 5px;
 }
 .NxtBtn {
-  margin-top: 55px;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
   background-color: rgb(77, 32, 255);
   color: white;
   border: none;
@@ -157,9 +164,8 @@
 }
 .timeTable{
   border-collapse: collapse;
-  width: 50%;
-  text-align: center;
   border: black;
+  margin-left: 35%;
 }
 
 .times:hover{

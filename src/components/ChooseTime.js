@@ -10,7 +10,8 @@ class ChooseTime extends Component {
      this.state ={
          bookings:[],
          timesList:["09:00-10:00", "10:00-11:00", "11:00-12:00", "12:00-13:00", "13:00-14:00", "14:00-15:00", "15:00-16:00", "16:00-17:00", "17:00-18:00"],
-         workingdaysList:["Mon", "Tue", "Wed", "Thu", "Fri"]
+         workingdaysList:["Mon", "Tue", "Wed", "Thu", "Fri"],
+         choosenTime: ''
         //  hairdresser: props.hairdressers.lname
      }
    }
@@ -35,24 +36,24 @@ class ChooseTime extends Component {
     render()
         {
         return (
-            <div>
+            <div className="centerAll">
                 <div>
-                    <span class="page done">1</span>
-                    <span class="page done">2</span>
-                    <span class="page active">3</span>
-                    <span class="page">4</span>
+                    <span className="page done">1</span>
+                    <span className="page done">2</span>
+                    <span className="page active">3</span>
+                    <span className="page">4</span>
                 </div>
                 <form>
 
-               <table class="timeTable">
-                   <thead class="weekdays">
+               <table className="timeTable">
+                   <thead>
                        <tr>
                        {this.state.workingdaysList.map((item) =>
                         <th value={item}>{item}</th>
                     )}
                        </tr>
                    </thead>
-                   <tbody class="time">
+                   <tbody>
                         {this.state.workingdaysList.map(dayOfWeek=>
                             <td id={dayOfWeek}>
                                 {this.state.timesList.map((item) =>
@@ -63,7 +64,8 @@ class ChooseTime extends Component {
                    </tbody>
                </table>
                </form>
-               <Link to="/confirm"><button className="NxtBtn">Next page</button></Link>
+               <Link to="/"><button className="NxtBtn">Previous page</button></Link>
+               <Link to="/confirm"><button className="NxtBtn">Confirm booking</button></Link>
             </div>
         )
     }

@@ -60,7 +60,10 @@ class SignUpForm extends Component {
                 <label className="FormField__Label" htmlFor="password">Password</label>
                 <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
               </div>
-         
+              <div className="FormField">
+                  <button className="FormField__Button mr-20">Register</button>
+                  <Link to="/sign-in" className="FormField__Link">Sign in page</Link>
+              </div>
             </form>
           </div>
         );

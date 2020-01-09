@@ -32,15 +32,15 @@ class ConfirmBooking extends Component {
     render()
         {
         return (
-            <div>
+            <div className="centerAll">
                 <div>
-                    <span class="page done">1</span>
-                    <span class="page done">2</span>
-                    <span class="page done">3</span>
-                    <span class="page active">4</span>
+                    <span className="page done">1</span>
+                    <span className="page done">2</span>
+                    <span className="page done">3</span>
+                    <span className="page active">4</span>
                 </div>
                 
-               <Link to="/"><button className="NxtBtn">Confirm booking</button></Link>
+               <Link to="/"><button className="NxtBtn">Confirm</button></Link>
             </div>
         )
     }

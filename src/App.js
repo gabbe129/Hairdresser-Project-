@@ -19,7 +19,7 @@ class App extends Component {
             
 
               <div className="FormTitle">
-                  <NavLink to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Home</NavLink>
+                  <NavLink to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Book time</NavLink>
                   <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink>
               </div>
 
