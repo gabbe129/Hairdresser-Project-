@@ -50,6 +50,8 @@ class ChooseHairdresser extends Component {
                     <span className="page">4</span>
                 </div>
                 <form>
+                <div>Choose hairdresser</div>
+
                     <select>
                         {this.state.hairdressers.map((item, key) =>
                         <option key={item.id} onClick={this.changeName.bind(this, item.id, item.fname, item.lname)}>{item.fname} {item.lname}</option>

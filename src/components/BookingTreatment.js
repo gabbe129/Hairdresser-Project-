@@ -41,6 +41,7 @@ class BookingTreatment extends Component {
                     <span className="page">4</span>
                 </div>
                 <form>
+                    <div>Choose treatment</div>
                     <select>
                         {this.state.treatments.map((item, key) =>
                         <option key={item.id}>{item.name}, {item.price}kr</option>
