@@ -11,24 +11,9 @@ class ConfirmBooking extends Component {
          
      }
    }
-    componentDidMount(){
-        this.getBookings();
-    }
-    getBookings = async () => {
-        const api_call = await fetch('https://bookingapihv.azurewebsites.net/api/bookings');
-        const data = await api_call.json();
-        
-        
-        let listItems = [];
-        data.forEach(element => {
-            listItems.push(element);
-        });
-            this.setState({
-                bookings: listItems
-            });
-
-    
-    }
+   getAlert(){
+       alert("Booking is confirmed");
+   }
     render()
         {
         return (
@@ -45,7 +30,19 @@ class ConfirmBooking extends Component {
                     <p>Day: chosen day</p>
                     <p>Time: chosen time</p>
                 </div>
-               <Link to="/"><button className="NxtBtn">Confirm</button></Link>
+                <div className="FormField">
+                    <input type="text" id="fName" className="confirmForm" placeholder="Enter your first name..." name="fName"/>
+                </div>
+                <div className="FormField">
+                    <input type="text" id="lName" className="confirmForm" placeholder="Enter your last name..." name="lName" />
+                </div>
+                <div className="FormField">
+                    <input type="text" id="lName" className="confirmForm" placeholder="Enter phonenumber..." name="phonenumber" />
+                </div>
+                <div className="FormField">
+                    <input type="text" id="lName" className="confirmForm" placeholder="Enter email..." name="email" />
+                </div>
+               <Link to="/"><button className="ConfirmBtn" onClick={this.getAlert}>Confirm</button></Link>
             </div>
         )
     }
