@@ -50,7 +50,7 @@ class ChooseTime extends Component {
                        <tr>
                        {this.state.workingdaysList.map((item) =>
                         <th value={item}>{item}</th>
-                    )}
+                        )}
                        </tr>
                    </thead>
                    <tbody>
@@ -63,6 +63,7 @@ class ChooseTime extends Component {
                         )}
                    </tbody>
                </table>
+
                </form>
                <Link to="/hairdresser"><button className="NxtBtn">Previous page</button></Link>
                <Link to="/confirm"><button className="NxtBtn">Confirm booking</button></Link>
